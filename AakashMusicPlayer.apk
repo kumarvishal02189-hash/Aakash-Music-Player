@@ -1,0 +1,175 @@
+PROJECT NAME: Aakash Music Player
+
+APK FILE NAME: AakashMusicPlayer.apk
+
+PROJECT TYPE: Native Android Offline Music and Video Player
+
+IMPORTANT REQUIREMENTS:
+
+Build a complete, fully functional Android music and video player. The application must work completely offline, without requiring an internet connection. Prioritize low RAM usage, low battery consumption, smooth performance, privacy, and reliable background playback.
+
+There is NO strict APK size limit. Functionality, offline operation, efficiency, and stability are more important than keeping the APK under 10 MB.
+
+TECHNOLOGY:
+
+- Use native Android development with Kotlin.
+- Use Jetpack Compose or lightweight native Android UI components.
+- Use Android Media3 ExoPlayer only where necessary for reliable media playback.
+- Use Android system media APIs wherever possible.
+- Keep external dependencies minimal.
+- Generate a complete Android Studio project that builds successfully.
+- Configure the release APK name as AakashMusicPlayer.apk.
+
+1. COMPLETE OFFLINE OPERATION
+
+- The application must work without Wi-Fi, mobile data, or an internet connection.
+- Do not include ads, online music streaming, online recommendations, cloud synchronization, analytics, or tracking.
+- Do not require user registration, login, or an online account.
+- Do not request INTERNET permission unless absolutely necessary; the intended app must not need it.
+- Store playlists, favorites, playback history, and settings locally.
+- Ensure all essential features continue to work in airplane mode.
+
+2. MUSIC PLAYER
+
+- Scan and display music files available on the device.
+- Support common Android-compatible audio formats.
+- Show song title, artist, album, duration, and artwork when available.
+- Provide Play, Pause, Next, Previous, Seek, and Stop controls.
+- Support Repeat One, Repeat All, and Shuffle.
+- Allow playback in the background and while the screen is off.
+- Continue audio playback while other apps are being used.
+- Display a media notification with playback controls.
+- Support lock-screen controls and headset media buttons.
+- Handle incoming calls, audio focus changes, and audio interruptions.
+- Restore playback state appropriately after interruptions.
+- Include a sleep timer that stops playback after a selected duration.
+- Provide queue management and the ability to reorder songs.
+- Support sorting by title, artist, album, duration, and date.
+- Include a search function for local music files.
+- Remember the last played song and playback position where appropriate.
+
+3. FAVORITES AND PLAYLISTS
+
+- Include a heart-shaped Favorite button.
+- Add a song to Favorites when the heart is selected.
+- Remove a song from Favorites when deselected.
+- Provide a dedicated Favorites screen.
+- Save favorite selections permanently using local storage.
+- Allow users to create, rename, and delete playlists.
+- Add or remove songs from playlists.
+- Support queueing songs from playlists.
+- Avoid duplicate entries where appropriate.
+- Keep favorites and playlists available after the app or device restarts.
+
+4. AUDIO FEATURES
+
+- Provide an equalizer when supported by Android and the device.
+- Include bass enhancement and other audio effects only when supported.
+- Do not promise hardware-dependent effects that cannot be implemented.
+- Include playback speed controls where supported.
+- Provide a simple, accessible volume control.
+- Avoid continuously running audio effects when playback is stopped.
+- Keep audio processing efficient to reduce battery consumption.
+
+5. VIDEO PLAYER
+
+- Scan and display local video files.
+- Support common video and audio formats supported by Android.
+- Provide Play, Pause, Seek, Next, Previous, and Repeat controls.
+- Include full-screen playback and landscape orientation.
+- Provide playback speed options such as 0.5x, 1x, 1.5x, and 2x.
+- Include volume and brightness controls within the video player.
+- Support subtitles when compatible subtitle files are available.
+- Remember the last playback position of each video.
+- Include a Favorite button for videos.
+- Provide a separate Favorites list for videos.
+- Support video file sorting and searching.
+- Handle unsupported formats gracefully without crashing.
+
+6. SCREEN-OFF VIDEO AUDIO
+
+- Allow the user to continue listening to a video's audio after turning off the screen.
+- Implement this through a proper Android background media playback service.
+- Provide playback controls through the media notification and lock screen where supported.
+- Allow the video image to stop rendering when the screen is off while audio continues.
+- Resume video display when the user returns to the video player, when practical.
+- Follow Android foreground-service and background execution requirements.
+- Do not keep the screen awake unnecessarily.
+- Avoid unnecessary background CPU activity.
+
+7. USER INTERFACE
+
+- Create a modern, attractive, lightweight interface.
+- Include Home, All Music, Albums, Artists, Folders, Videos, Favorites, Playlists, and Settings.
+- Include light and dark themes.
+- Use clear icons and smooth navigation.
+- Provide a clean Now Playing screen with album artwork when available.
+- Include a seek bar and playback controls.
+- Provide useful empty states when no media is found.
+- Support small screens and low-end Android devices.
+- Keep animations minimal to reduce unnecessary resource usage.
+
+8. FILE MANAGEMENT AND PERMISSIONS
+
+- Use Android MediaStore to discover local audio and video files where possible.
+- Request only the permissions needed for the selected Android version.
+- Respect Android scoped storage requirements.
+- Allow the user to select media folders when appropriate.
+- Do not modify or delete the user's media files without explicit action.
+- Handle missing, moved, or deleted media files safely.
+
+9. LOW RAM AND BATTERY CONSUMPTION
+
+- Avoid unnecessary background services.
+- Keep the playback service active only when needed.
+- Stop scanning and release unused resources when appropriate.
+- Avoid continuous polling and unnecessary timers.
+- Release audio and video decoders when playback ends.
+- Avoid loading every album image at full resolution.
+- Cache thumbnails efficiently and use memory-conscious image loading.
+- Avoid unnecessary animations and heavy visual effects.
+- Do not run CPU-intensive work while idle.
+- Do not automatically restart playback unless the user explicitly enables that behavior.
+- Optimize for low-end Android phones.
+- Ensure playback remains stable during long listening sessions.
+
+10. PRIVACY AND SECURITY
+
+- Do not collect personal information.
+- Do not include advertising SDKs.
+- Do not include tracking or analytics SDKs.
+- Do not transmit local media information anywhere.
+- Do not upload songs, videos, playlists, or favorites.
+- Do not use unnecessary permissions.
+- Ensure all user data remains on the device.
+
+11. RELIABILITY AND TESTING
+
+- Test audio playback, video playback, favorites, playlists, Repeat, Shuffle, and seeking.
+- Test screen-off audio playback.
+- Test background playback while another app is open.
+- Test lock-screen media controls.
+- Test behavior when headphones are disconnected.
+- Test airplane mode to verify offline operation.
+- Test low-memory conditions and long playback sessions.
+- Fix compilation errors and runtime crashes.
+- Do not implement fake buttons or placeholder functionality.
+- Clearly document any feature limited by the device or Android version.
+
+12. BUILD AND DELIVERABLES
+
+- Provide the complete Android Studio source project.
+- Include Kotlin source files, AndroidManifest.xml, Gradle files, layouts or Compose UI, and required resources.
+- Include a README explaining how to build and install the app.
+- Configure the release APK output name as AakashMusicPlayer.apk.
+- Provide instructions for generating the release APK.
+- Explain how to sign the APK using the developer's own signing credentials.
+- Report the actual APK size after a successful build.
+- Do not claim that an APK has been built unless the build was actually completed.
+- Do not include unnecessary libraries merely to increase the feature count.
+
+FINAL GOAL:
+
+Create a fully functional, privacy-friendly, offline-first Android music and video player with Favorites, Playlists, Repeat, Shuffle, Equalizer where supported, video playback, screen-off audio playback, lock-screen controls, and background playback.
+
+The application must prioritize complete offline functionality, low RAM consumption, low battery usage, reliability, and a clean user interface over APK size.
